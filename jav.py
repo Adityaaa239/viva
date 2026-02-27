@@ -13,7 +13,7 @@ model = LinearRegression()
 model.fit(X, y)
 
 # Step 5: Predict
-hours = np.array([[5]])
+hours = np.array([[10]])
 prediction = model.predict(hours)
 
 print("Predicted marks for 5 hours study:", prediction[0])
