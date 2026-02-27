@@ -1,19 +1,15 @@
-# Step 1: Import library
-from sklearn.linear_model import LinearRegression
+import matplotlib
+import matplotlib.pyplot as plt
 import numpy as np
-
-# Step 2: Training data (Input and Output)
-X = np.array([[1], [2], [3], [4]])   # Hours studied
-y = np.array([35, 50, 65, 80])       # Marks scored
-
-# Step 3: Create model
-model = LinearRegression()
-
-# Step 4: Train model
-model.fit(X, y)
-
-# Step 5: Predict
-hours = np.array([[10]])
-prediction = model.predict(hours)
-
-print("Predicted marks for 5 hours study:", prediction[0])
+import pandas as pd
+import sklearn
+from sklearn import linear_model
+height=[[4.0],[5.0],[6.0],[7.0],[8.0],[9.0],[10.0]]
+weight=[  8, 10 , 12, 14, 16, 18, 20]
+plt.scatter(height,weight,color='black')
+plt.xlabel("height")
+plt.ylabel("weight")
+reg=linear_model.LinearRegression()
+reg.fit(height,weight)
+X_height=[[12.0]]
+print(reg.predict(X_height)
